@@ -891,11 +891,11 @@ export default {
 ### 9.2 运行
 
 1. 确保启动 mongodb 服务 
-2. 进入mintshop-server文件夹，启动服务器应用:  `npm start`
+2. 进入gshop-server_final文件夹，通过cmd端口启动服务器应用:  `npm start`，开启后端口号为 4000
 
 ### 9.3 API文档
 
-**具体API文档详见mintshop-server/API.md，然后可以使用Postman来进行接口测试**
+**具体API文档详见gshop-server_final/API.md，然后可以使用Postman来进行接口测试**
 
 ## 10. 前后台交互 ajax 
 
@@ -951,7 +951,7 @@ export default function ajax(url = '', data = {}, type = 'GET') {
 }
 ```
 
-- 通过对axios返回的promise对象再包装一层Promise的方法，来简化外部的调用
+- 通过对axios返回的promise对象再包装一层Promise的方法，提取返回数据中想要的部分，来简化外部的调用
 
 ### 10.2 封装接口请求函数
 
@@ -2610,9 +2610,9 @@ Mock.mock('/info', {code: 0, data: data.info})
 > 既然要实现左右两侧的联动，那么首先要获取一些位置信息。
 >
 > 	scrollY: 右侧食品列表滑动的Y轴坐标（滑动过程中实时变化）
->			
+>				
 > 	tops: 所有右侧分类标题到屏幕顶部的距离，即li的top值组成的数组
->			
+>				
 > 		（列表第一次显示后就不再变化）
 >
 > 1. 在滑动过程中，实时收集scrollY
